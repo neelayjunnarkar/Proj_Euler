@@ -9,9 +9,7 @@ pub fn run() -> String {
     let mut factors: Vec<u64> = vec![];
 
     let max: u64 = (n as f64).sqrt().ceil() as u64;
-    
-    println!("max: {}", max);
-    
+     
     while n % 2 == 0 {
         n/= 2;
         factors.push(2);

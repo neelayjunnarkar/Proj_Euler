@@ -30,7 +30,7 @@ impl Iterator for TriangularNum {
     
 }
 
-fn num_divisors(mut n: u64) -> u32 {
+fn num_divisors(n: u64) -> u32 {
    let mut num_divisors: u32 = 0;
     if (n as f64).sqrt() as u64 == ((n as f64).sqrt() as u64) * ((n as f64).sqrt() as u64) {
         for num in 1 as u64..( (n as f64).sqrt().ceil() as u64) {

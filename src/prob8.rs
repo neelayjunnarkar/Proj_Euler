@@ -29,6 +29,5 @@ pub fn run() -> String {
         .map(|x| x.iter().fold(1u64, |acc, &iter| acc*iter))
         .max()
         .unwrap()
-	.to_string()
-   
+	    .to_string()
 }

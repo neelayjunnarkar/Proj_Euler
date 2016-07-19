@@ -31,7 +31,7 @@ pub fn run() -> String{
 	let grid: Vec<Vec<u32>> = string
 		.trim()
 		.lines()
-		.filter_map(|line| line.words().map(|w| w.parse().ok()).collect())
+		.filter_map(|line| line.split(' ').map(|w| w.parse().ok()).collect())
 		.collect();
 
 	for row in &grid {

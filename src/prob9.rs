@@ -1,17 +1,26 @@
 //Pythagorean Triplet
 
-pub fn run() -> String{
-    /*let mut a = 1;
-
-    'outer: loop {
-        for b in (a+1)..(1000+a) {
-            if a*a + b*b == (1000-a-b)*(1000-a-b) {
-                println!("a+b+c: {}", a+b+(1000-a-b));
-                return (a*b*(1000-a-b)).to_string()
-                break 'outer;
+pub fn run() -> String {
+    for a in 1..1000 {
+        for b in 1..1000 {
+            if a + b >= 1000 {
+                continue;
+            }
+            if let Some(c) = c(a, b) {
+                if a + b + c == 1000 {
+                    return (a*b*c).to_string();
+                }
             }
         }
-        a += 1;
-    }*/
-    "prob9 broken for now".to_string()
+    }
+    "not finished".to_string()
+}
+
+fn c(a: u32, b: u32) -> Option<u32> {
+    let c: f64 = ((a.pow(2) + b.pow(2)) as f64).sqrt();
+    if c == c.round() {
+        Some(c as u32)
+    } else {
+        None
+    }
 }

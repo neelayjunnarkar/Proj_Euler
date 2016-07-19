@@ -1,5 +1,5 @@
 
-use std::num::Float;
+use std::f32;
 
 pub fn run() -> String {
     (((1..101).fold(0, |acc, iter| acc+iter) as f32).powi(2) as u32 -
