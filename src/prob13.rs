@@ -1,4 +1,4 @@
-
+//First 10 digits of Sum of these 100 50-digit numbers
 pub fn run() -> String {
     let string = "37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -101,11 +101,12 @@ pub fn run() -> String {
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690";
 
-   string.trim()
+    (&string.trim()
         .lines()
         .filter_map(|s| (&s[0..13]).parse().ok())
         .fold(0, |acc, iter: u64| acc+iter)
-	.to_string()
+        .to_string()[..10])
+        .to_string()
 
 }
 

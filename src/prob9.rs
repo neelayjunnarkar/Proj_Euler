@@ -13,7 +13,7 @@ pub fn run() -> String {
             }
         }
     }
-    "not finished".to_string()
+    "Problem 9: Error".to_string()
 }
 
 fn c(a: u32, b: u32) -> Option<u32> {
